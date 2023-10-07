@@ -15,7 +15,7 @@ fileOutput = '<body>'
 # print(files) # as list
 for f in files:
     splitResult = f.split(".github.io")
-    fileOutput += "<a href=https://" + githubSite + splitResult[1] + ">https://" + githubSite + splitResult[1] + '</a> <br />'
+    fileOutput += "<a href=https://" + githubSite + splitResult[1].replace('\\','/').replace(' ','%20') + ">https://" + githubSite + splitResult[1].replace('\\','/') + '</a> <br />'
 	
 fileOutput += '</body>'
 
